@@ -1,0 +1,39 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    volumes:
+      - ./src:/app/src/
+      - ./uploads:/app/uploads
+      - ./logs:/tmp/logs
+    ports:
+      - "8000:8000"
+    command: ["/app/wait-for-it.sh", "mariadb_database:3306", "--", "bash", "-c", "alembic upgrade head && uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"]
+    env_file: .env
+    networks:
+      - app-network
+    depends_on:
+      - mariadb_database
+
+  mariadb_database:
+    image: mariadb
+    container_name: mariadb_database
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ".docker/db_data:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+    env_file: .env
+    environment:
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=a2i9_Matthew
+      - MYSQL_PASSWORD=F6vDmtz7RVFcbu0JqH9th1Ten
+      - MYSQL_ROOT_PASSWORD=UGp3Rlf8KHy6r6cKqDijSmoOm
+      - TZ=America/Sao_Paulow
+    networks:
+      - app-network
+
+networks:
+  app-network:
