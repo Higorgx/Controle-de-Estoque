@@ -16,6 +16,7 @@ class CriaPessoaSchema(BaseModel):
     cpf_cnpj: str = Field(..., max_length=20, description="CPF ou CNPJ (não armazenar como número)")
     rg_ie: Optional[str] = Field(None, max_length=50)
     Admin: Optional[str] = Field('0', max_length=1, description="Padrão 0")
+    legado: Optional[str] = Field('0', max_length=1, description="Padrão 0")
 
     class Config:
         orm_mode = True

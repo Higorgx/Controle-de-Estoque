@@ -183,3 +183,1066 @@ WHERE pessoas.cpf_cnpj = %s]
 2025-04-01 20:47:30 - uvicorn.error - INFO - [on.py:62] Application startup complete.
 2025-04-01 20:47:34 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:56874 - "POST /pessoa/ HTTP/1.1" 201
 2025-04-01 20:47:42 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:54696 - "PUT /pessoa/1 HTTP/1.1" 201
+2025-04-02 13:35:01 - uvicorn.error - INFO - [server.py:83] Started server process [30]
+2025-04-02 13:35:01 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:35:01 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:35:01 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:35:01 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:35:01 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:35:01 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:39:25 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:39:25 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:39:25 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:39:25 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:39:25 - uvicorn.error - INFO - [server.py:93] Finished server process [30]
+2025-04-02 13:39:39 - uvicorn.error - INFO - [server.py:83] Started server process [30]
+2025-04-02 13:39:39 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:39:39 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:39:39 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:39:39 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:39:39 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:39:39 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:43:55 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:43:55 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:43:55 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:43:55 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:43:55 - uvicorn.error - INFO - [server.py:93] Finished server process [30]
+2025-04-02 13:43:56 - uvicorn.error - INFO - [server.py:83] Started server process [32]
+2025-04-02 13:43:56 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:43:56 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:43:56 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:43:56 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:43:56 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:43:56 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:44:25 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:44:25 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:44:25 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:44:25 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:44:25 - uvicorn.error - INFO - [server.py:93] Finished server process [32]
+2025-04-02 13:44:26 - uvicorn.error - INFO - [server.py:83] Started server process [33]
+2025-04-02 13:44:26 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:44:26 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:44:26 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:44:26 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:44:26 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:44:26 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:44:47 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:44:47 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:44:47 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:44:47 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:44:47 - uvicorn.error - INFO - [server.py:93] Finished server process [33]
+2025-04-02 13:44:48 - uvicorn.error - INFO - [server.py:83] Started server process [34]
+2025-04-02 13:44:48 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:44:48 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:44:48 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:44:48 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:44:48 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:44:48 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:45:06 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:36020 - "GET /docs HTTP/1.1" 200
+2025-04-02 13:45:06 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:36020 - "GET /openapi.json HTTP/1.1" 200
+2025-04-02 13:45:13 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:36022 - "PATCH /pessoa/2 HTTP/1.1" 400
+2025-04-02 13:46:03 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:59098 - "POST /pessoa/ HTTP/1.1" 400
+2025-04-02 13:46:10 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:56048 - "POST /pessoa/ HTTP/1.1" 201
+2025-04-02 13:46:23 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:36104 - "PATCH /pessoa/2 HTTP/1.1" 500
+2025-04-02 13:46:23 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3538, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 65, in deleta_pessoa
+    pessoa = await PessoaRepository.delete(db, existing_pessoa)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 50, in delete
+    await db.delete(pessoa)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/ext/asyncio/session.py", line 773, in delete
+    await greenlet_spawn(self.sync_session.delete, instance)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.switch(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3540, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped
+2025-04-02 13:47:09 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:47:09 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:47:09 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:47:09 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:47:09 - uvicorn.error - INFO - [server.py:93] Finished server process [34]
+2025-04-02 13:47:10 - uvicorn.error - INFO - [server.py:83] Started server process [39]
+2025-04-02 13:47:10 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:47:10 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:47:10 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:47:10 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:47:10 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:47:10 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:47:13 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:55942 - "PATCH /pessoa/2 HTTP/1.1" 500
+2025-04-02 13:47:13 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/fastapi/encoders.py", line 324, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/fastapi/encoders.py", line 329, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 69, in deleta_pessoa
+    "data":  jsonable_encoder(pessoa)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/encoders.py", line 332, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-04-02 13:47:28 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:47:28 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:47:28 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:47:28 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:47:28 - uvicorn.error - INFO - [server.py:93] Finished server process [39]
+2025-04-02 13:47:29 - uvicorn.error - INFO - [server.py:83] Started server process [44]
+2025-04-02 13:47:29 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:47:29 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:47:29 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:47:29 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:47:29 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:47:29 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:47:36 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:47:36 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:47:36 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:47:36 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:47:36 - uvicorn.error - INFO - [server.py:93] Finished server process [44]
+2025-04-02 13:47:36 - uvicorn.error - INFO - [server.py:83] Started server process [45]
+2025-04-02 13:47:36 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:47:36 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:47:36 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:47:36 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:47:36 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:47:36 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:47:39 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:40954 - "PATCH /pessoa/2 HTTP/1.1" 500
+2025-04-02 13:47:39 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3538, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 65, in deleta_pessoa
+    pessoa = await PessoaRepository.delete(db, existing_pessoa)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 51, in delete
+    await db.delete(pessoa)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/ext/asyncio/session.py", line 773, in delete
+    await greenlet_spawn(self.sync_session.delete, instance)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.switch(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3540, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped
+2025-04-02 13:48:34 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:48:34 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:48:34 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:48:34 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:48:34 - uvicorn.error - INFO - [server.py:93] Finished server process [45]
+2025-04-02 13:48:35 - uvicorn.error - INFO - [server.py:83] Started server process [50]
+2025-04-02 13:48:35 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:48:35 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:48:35 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:48:35 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:48:35 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:48:35 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:48:38 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:56084 - "PATCH /pessoa/2 HTTP/1.1" 500
+2025-04-02 13:48:38 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3538, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 65, in deleta_pessoa
+    pessoa = await PessoaRepository.delete(db, existing_pessoa)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 51, in delete
+    await db.delete(pessoa)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/ext/asyncio/session.py", line 773, in delete
+    await greenlet_spawn(self.sync_session.delete, instance)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.switch(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3540, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped
+2025-04-02 13:49:13 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:49:13 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:49:13 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:49:13 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:49:13 - uvicorn.error - INFO - [server.py:93] Finished server process [50]
+2025-04-02 13:49:14 - uvicorn.error - INFO - [server.py:83] Started server process [55]
+2025-04-02 13:49:14 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:49:14 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:49:14 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:49:14 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:49:14 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:49:14 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:49:14 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:37974 - "PATCH /pessoa/2 HTTP/1.1" 500
+2025-04-02 13:49:14 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3538, in delete
+    state = attributes.instance_state(instance)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 65, in deleta_pessoa
+    pessoa = await PessoaRepository.delete(db, existing_pessoa)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 51, in delete
+    await db.delete(pessoa)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/ext/asyncio/session.py", line 773, in delete
+    await greenlet_spawn(self.sync_session.delete, instance)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.switch(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3540, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped
+2025-04-02 13:50:37 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:50:37 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:50:37 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:50:37 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:50:37 - uvicorn.error - INFO - [server.py:93] Finished server process [55]
+2025-04-02 13:50:37 - uvicorn.error - INFO - [server.py:83] Started server process [60]
+2025-04-02 13:50:37 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:50:37 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:50:37 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:50:37 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:50:37 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:50:37 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:50:42 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:50:42 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:50:42 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:50:42 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:50:42 - uvicorn.error - INFO - [server.py:93] Finished server process [60]
+2025-04-02 13:50:43 - uvicorn.error - INFO - [server.py:83] Started server process [61]
+2025-04-02 13:50:43 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:50:43 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:50:43 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:50:43 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:50:43 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:50:43 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:50:45 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:51966 - "PATCH /pessoa/2 HTTP/1.1" 200
+2025-04-02 13:50:54 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:51978 - "PATCH /pessoa/2 HTTP/1.1" 400
+2025-04-02 13:51:10 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:52436 - "POST /pessoa/ HTTP/1.1" 201
+2025-04-02 13:51:14 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:52436 - "PATCH /pessoa/3 HTTP/1.1" 200
+2025-04-02 13:51:58 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:51:58 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:51:58 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:51:58 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:51:58 - uvicorn.error - INFO - [server.py:93] Finished server process [61]
+2025-04-02 13:51:59 - uvicorn.error - INFO - [server.py:83] Started server process [66]
+2025-04-02 13:51:59 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:51:59 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:51:59 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:51:59 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:51:59 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:51:59 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:52:09 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:53496 - "POST /pessoa/ HTTP/1.1" 201
+2025-04-02 13:52:12 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:53496 - "PATCH /pessoa/4 HTTP/1.1" 200
+2025-04-02 13:53:14 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:53:14 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:53:14 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:53:14 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:53:14 - uvicorn.error - INFO - [server.py:93] Finished server process [66]
+2025-04-02 13:53:15 - uvicorn.error - INFO - [server.py:83] Started server process [71]
+2025-04-02 13:53:15 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:53:15 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:53:15 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:53:15 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:53:15 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:53:15 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:53:48 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:53:48 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:53:48 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:53:48 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:53:48 - uvicorn.error - INFO - [server.py:93] Finished server process [71]
+2025-04-02 13:57:43 - uvicorn.error - INFO - [server.py:83] Started server process [37]
+2025-04-02 13:57:43 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:57:43 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:57:43 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:57:43 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:57:43 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:57:43 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:57:47 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:57:47 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:57:47 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:57:47 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:57:47 - uvicorn.error - INFO - [server.py:93] Finished server process [37]
+2025-04-02 13:57:47 - uvicorn.error - INFO - [server.py:83] Started server process [49]
+2025-04-02 13:57:47 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:57:47 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:57:47 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:57:47 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:57:47 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:57:47 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:57:59 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:57:59 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:57:59 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:57:59 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:57:59 - uvicorn.error - INFO - [server.py:93] Finished server process [49]
+2025-04-02 13:58:00 - uvicorn.error - INFO - [server.py:83] Started server process [61]
+2025-04-02 13:58:00 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:58:00 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:58:00 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:58:00 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:58:00 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:58:00 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 13:58:34 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 13:58:35 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 13:58:35 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 13:58:35 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 13:58:35 - uvicorn.error - INFO - [server.py:93] Finished server process [61]
+2025-04-02 13:58:35 - uvicorn.error - INFO - [server.py:83] Started server process [62]
+2025-04-02 13:58:35 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 13:58:35 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 13:58:35 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 13:58:35 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 13:58:35 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 13:58:35 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:01:42 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:01:42 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:01:42 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:01:42 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:01:42 - uvicorn.error - INFO - [server.py:93] Finished server process [62]
+2025-04-02 14:01:43 - uvicorn.error - INFO - [server.py:83] Started server process [81]
+2025-04-02 14:01:43 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:01:43 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:01:43 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:01:43 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:01:43 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:01:43 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:03:34 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:03:34 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:03:34 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:03:34 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:03:34 - uvicorn.error - INFO - [server.py:93] Finished server process [81]
+2025-04-02 14:03:35 - uvicorn.error - INFO - [server.py:83] Started server process [82]
+2025-04-02 14:03:35 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:03:35 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:03:35 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:03:35 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:03:35 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:03:35 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:05:08 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:05:08 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:05:08 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:05:08 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:05:08 - uvicorn.error - INFO - [server.py:93] Finished server process [82]
+2025-04-02 14:05:09 - uvicorn.error - INFO - [server.py:83] Started server process [83]
+2025-04-02 14:05:09 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:05:09 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:05:09 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:05:09 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:05:09 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:05:09 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:05:25 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:34754 - "POST /pessoa/ HTTP/1.1" 500
+2025-04-02 14:05:25 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 30, in cria_pessoa
+    pessoa = await PessoaRepository.create(db, pessoaSchema)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 32, in create
+    db_pessoa = Pessoa(**pessoa_data.dict())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/decl_base.py", line 2175, in _declarative_constructor
+    raise TypeError(
+TypeError: 'Legado' is an invalid keyword argument for Pessoa
+2025-04-02 14:07:10 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:58976 - "POST /pessoa/ HTTP/1.1" 500
+2025-04-02 14:07:10 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 30, in cria_pessoa
+    pessoa = await PessoaRepository.create(db, pessoaSchema)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 32, in create
+    db_pessoa = Pessoa(**pessoa_data.dict())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/decl_base.py", line 2175, in _declarative_constructor
+    raise TypeError(
+TypeError: 'Legado' is an invalid keyword argument for Pessoa
+2025-04-02 14:07:13 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:59004 - "GET /docs HTTP/1.1" 200
+2025-04-02 14:07:13 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:59004 - "GET /openapi.json HTTP/1.1" 200
+2025-04-02 14:07:18 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:59004 - "POST /pessoa/ HTTP/1.1" 400
+2025-04-02 14:07:24 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:58992 - "POST /pessoa/ HTTP/1.1" 500
+2025-04-02 14:07:24 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 30, in cria_pessoa
+    pessoa = await PessoaRepository.create(db, pessoaSchema)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 32, in create
+    db_pessoa = Pessoa(**pessoa_data.dict())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/decl_base.py", line 2175, in _declarative_constructor
+    raise TypeError(
+TypeError: 'Legado' is an invalid keyword argument for Pessoa
+2025-04-02 14:07:50 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:07:56 - uvicorn.error - INFO - [server.py:83] Started server process [26]
+2025-04-02 14:07:56 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:07:56 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:07:56 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:07:56 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:07:56 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:07:56 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:07:58 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:59048 - "POST /pessoa/ HTTP/1.1" 500
+2025-04-02 14:07:58 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 30, in cria_pessoa
+    pessoa = await PessoaRepository.create(db, pessoaSchema)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/repositories/pessoa_repository.py", line 32, in create
+    db_pessoa = Pessoa(**pessoa_data.dict())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/decl_base.py", line 2175, in _declarative_constructor
+    raise TypeError(
+TypeError: 'Legado' is an invalid keyword argument for Pessoa
+2025-04-02 14:09:25 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:09:25 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:09:25 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:09:25 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:09:25 - uvicorn.error - INFO - [server.py:93] Finished server process [26]
+2025-04-02 14:09:26 - uvicorn.error - INFO - [server.py:83] Started server process [32]
+2025-04-02 14:09:26 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:09:26 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:09:26 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:09:26 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:09:26 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:09:26 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:09:55 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:09:55 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:09:55 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:09:55 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:09:55 - uvicorn.error - INFO - [server.py:93] Finished server process [32]
+2025-04-02 14:09:56 - uvicorn.error - INFO - [server.py:83] Started server process [33]
+2025-04-02 14:09:56 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:09:56 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:09:56 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:09:56 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:09:56 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:09:56 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:09:58 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:09:58 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:09:58 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:09:58 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:09:58 - uvicorn.error - INFO - [server.py:93] Finished server process [33]
+2025-04-02 14:09:58 - uvicorn.error - INFO - [server.py:83] Started server process [34]
+2025-04-02 14:09:58 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:09:58 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:09:58 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:09:58 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:09:58 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:09:58 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:10:21 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:10:21 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:10:21 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:10:21 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:10:21 - uvicorn.error - INFO - [server.py:93] Finished server process [34]
+2025-04-02 14:10:22 - uvicorn.error - INFO - [server.py:83] Started server process [35]
+2025-04-02 14:10:22 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:10:22 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:10:22 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:10:22 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:10:22 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:10:22 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:10:23 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:49818 - "POST /pessoa/ HTTP/1.1" 201
+2025-04-02 14:11:39 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:11:39 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:11:39 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:11:39 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:11:39 - uvicorn.error - INFO - [server.py:93] Finished server process [35]
+2025-04-02 14:11:40 - uvicorn.error - INFO - [server.py:83] Started server process [40]
+2025-04-02 14:11:40 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:11:40 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:11:40 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:11:40 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:11:40 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:11:40 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:11:52 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:43964 - "POST /pessoa/ HTTP/1.1" 500
+2025-04-02 14:11:52 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 31, in cria_pessoa
+    await PessoaRepository.delete(legado)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PessoaRepository.delete() missing 1 required positional argument: 'pessoa'
+2025-04-02 14:12:24 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:49120 - "POST /pessoa/ HTTP/1.1" 500
+2025-04-02 14:12:24 - uvicorn.error - ERROR - [httptools_impl.py:414] Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/api/v1/pessoa.py", line 31, in cria_pessoa
+    await PessoaRepository.delete(legado)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PessoaRepository.delete() missing 1 required positional argument: 'pessoa'
+2025-04-02 14:12:30 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:12:31 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:12:31 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:12:31 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:12:31 - uvicorn.error - INFO - [server.py:93] Finished server process [40]
+2025-04-02 14:12:31 - uvicorn.error - INFO - [server.py:83] Started server process [45]
+2025-04-02 14:12:31 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:12:31 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:12:31 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:12:31 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:12:31 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:12:31 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:12:49 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:40464 - "POST /pessoa/ HTTP/1.1" 201
+2025-04-02 14:16:10 - uvicorn.error - INFO - [server.py:263] Shutting down
+2025-04-02 14:16:10 - uvicorn.error - INFO - [on.py:67] Waiting for application shutdown.
+2025-04-02 14:16:10 - src.main - INFO - [main.py:44] Encerrando o sistema...
+2025-04-02 14:16:10 - uvicorn.error - INFO - [on.py:76] Application shutdown complete.
+2025-04-02 14:16:10 - uvicorn.error - INFO - [server.py:93] Finished server process [45]
+2025-04-02 14:16:11 - uvicorn.error - INFO - [server.py:83] Started server process [50]
+2025-04-02 14:16:11 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 14:16:11 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 14:16:11 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 14:16:11 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 14:16:11 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 14:16:11 - uvicorn.error - INFO - [on.py:62] Application startup complete.
+2025-04-02 14:16:13 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:38012 - "POST /pessoa/ HTTP/1.1" 400
+2025-04-02 14:16:20 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:46910 - "POST /pessoa/ HTTP/1.1" 201

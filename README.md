@@ -59,3 +59,10 @@ Como gerar migration
 alembic revision --autogenerate -m "Initial models"
 alembic upgrade head
 ```
+
+## resolução de problemas
+caso tenha algum problema de portas em uso
+'failed to bind host port for 0.0.0.0:3306:172.19.0.2:3306/tcp: address already in use'
+```bash
+sudo systemctl stop mysql
+```

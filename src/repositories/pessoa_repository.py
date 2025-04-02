@@ -45,11 +45,9 @@ class PessoaRepository():
         result = await db.execute(query)
         return result.scalars().first()  # Returns None if not found
 
-    async def delete(self, db: AsyncSession, pessoa_id: int) -> bool:
-        pessoa = await self.get_by_id(db, pessoa_id)
-        if not pessoa:
-            return False
-
+    @staticmethod
+    async def delete(db: AsyncSession, pessoa: Pessoa) -> bool:
+ 
         await db.delete(pessoa)
         await db.commit()
         return True

@@ -24,3 +24,4 @@ class Pessoa(Base):
     data_criacao = Column(DateTime, default=func.now())
     data_atualizacao = Column(DateTime, default=func.now(), onupdate=func.now())
     Admin = Column(CHAR(), nullable=True)
+    legado = Column(CHAR(), nullable=True)

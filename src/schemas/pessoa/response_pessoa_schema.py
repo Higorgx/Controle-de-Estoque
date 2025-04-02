@@ -20,3 +20,4 @@ class AlteraPessoaResponseSchema(BaseModel):
     cpf_cnpj: Optional[str] 
     rg_ie: Optional[str]
     Admin: Optional[str]
+    legado: Optional[str]

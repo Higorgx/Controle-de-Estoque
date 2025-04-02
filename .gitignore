@@ -1,0 +1,53 @@
+# Python
+*.py[cod]        # Arquivos compilados do Python
+__pycache__/     # Cache do Python
+*.pyo            # Arquivos otimizados
+*.pyd            # Bibliotecas compiladas
+*.pyc
+
+# Logs
+logs/*
+*.log            # Arquivos de log
+
+# Ambientes Virtuais
+.env/            # Ambiente virtual (se estiver em uma pasta chamada .env)
+.venv/            # Ambiente virtual padrão
+.venv
+
+# Configurações do Sistema Operacional
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# IDEs e Editores
+.idea/           # PyCharm
+.vscode/         # Configurações do VS Code
+*.swp            # Arquivos temporários do Vim
+
+# Docker
+*.env            # Arquivo de variáveis de ambiente
+docker-compose.override.yml  # Configuração personalizada do Docker Compose
+
+# Arquivos de Banco de Dados
+*.sqlite3        # Bancos de dados SQLite
+
+# Arquivos Temporários
+*.tmp
+*.bak
+*.~*~
+*.temp
+
+# Testes
+.coverage        # Arquivo de cobertura de testes
+pytest_cache/    # Cache do Pytest
+.tox/            # Diretório do Tox
+.nox/            # Diretório do Nox
+
+# Outras Configurações
+instance/        # Configurações específicas da instância
+.envrc           # Arquivo de configuração do direnv
+
+.docker/
+uploads/*
+
+# Variaveis de ambiente
+.env
