@@ -1246,3 +1246,10 @@ TypeError: PessoaRepository.delete() missing 1 required positional argument: 'pe
 2025-04-02 14:16:11 - uvicorn.error - INFO - [on.py:62] Application startup complete.
 2025-04-02 14:16:13 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:38012 - "POST /pessoa/ HTTP/1.1" 400
 2025-04-02 14:16:20 - uvicorn.access - INFO - [httptools_impl.py:476] 172.19.0.1:46910 - "POST /pessoa/ HTTP/1.1" 201
+2025-04-02 15:36:23 - uvicorn.error - INFO - [server.py:83] Started server process [28]
+2025-04-02 15:36:23 - uvicorn.error - INFO - [on.py:48] Waiting for application startup.
+2025-04-02 15:36:23 - src.main - INFO - [main.py:35] Iniciando o sistema...
+2025-04-02 15:36:23 - src.db.database - INFO - [database.py:38] Iniciando conexão com o banco de dados...
+2025-04-02 15:36:23 - src.db.database - INFO - [database.py:42] Conexão com o banco de dados estabelecida com sucesso.
+2025-04-02 15:36:23 - src.main - INFO - [main.py:37] Sistema iniciado com sucesso.
+2025-04-02 15:36:23 - uvicorn.error - INFO - [on.py:62] Application startup complete.
