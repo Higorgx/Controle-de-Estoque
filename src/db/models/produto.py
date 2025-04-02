@@ -1,11 +1,9 @@
+# src/db/models/produto.py
 from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from datetime import datetime
-from sqlalchemy.ext.declarative import declarative_base
-from src.db.models.models import Base  # Importa a Base centralizada
-
-Base = declarative_base()
+from src.db.models.models import Base
 
 class Produto(Base):
     __tablename__ = "produtos"
@@ -23,8 +21,8 @@ class Produto(Base):
     data_criacao = Column(DateTime, default=func.now())
     data_atualizacao = Column(DateTime, default=func.now(), onupdate=func.now())
     
-    # Relação com Fornecedor
-    fornecedor_id = Column(Integer, ForeignKey("fornecedor.id"))
+    # Corrigido para "fornecedores.id" (deve bater com __tablename__ do Fornecedor)
+    fornecedor_id = Column(Integer, ForeignKey("fornecedores.id"))
     fornecedor = relationship("Fornecedor", back_populates="produtos")
     
     def __repr__(self):
