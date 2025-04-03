@@ -3,6 +3,7 @@ from src.db.models.produto import Produto
 from src.schemas.produto.cria_produto_schema import CriaProdutoSchema
 from src.schemas.produto.altera_produto_schema import AlteraProdutoSchema
 from datetime import datetime
+from sqlalchemy.future import select
 
 class ProdutoRepository:
     @staticmethod
