@@ -20,7 +20,8 @@ Thumbs.db        # Windows
 
 # IDEs e Editores
 .idea/           # PyCharm
-.vscode/         # Configurações do VS Code
+.vscode         # Configurações do VS Code
+.vscode/*
 *.swp            # Arquivos temporários do Vim
 
 # Docker
@@ -46,7 +47,8 @@ pytest_cache/    # Cache do Pytest
 instance/        # Configurações específicas da instância
 .envrc           # Arquivo de configuração do direnv
 
-.docker/
+.docker
+.docker/*
 uploads/*
 
 # Variaveis de ambiente
