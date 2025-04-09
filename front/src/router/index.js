@@ -44,7 +44,7 @@ const routes = [
             return h(resolveComponent('router-view'))
           },
         },
-        redirect: '/produto/cadastro',
+        redirect: '/produto/lista',
         children: [
           {
             path: '/produto/cadastro',
@@ -55,6 +55,23 @@ const routes = [
             path: '/produto/lista',
             name: 'lista Produto',
             component: () => import('@/views/pages/produto/lista'),
+          },
+        ],
+      },
+      {
+        path: '/estoque',
+        name: 'Estoque',
+        component: {
+          render() {
+            return h(resolveComponent('router-view'))
+          },
+        },
+        redirect: '/estoque/contagem',
+        children: [
+          {
+            path: '/estoque/contagem',
+            name: 'contagem Produto',
+            component: () => import('@/views/pages/estoque/contagem'),
           },
         ],
       },

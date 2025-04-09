@@ -284,7 +284,7 @@ onMounted(() => {
         <CCardHeader>
           <div class="d-flex justify-content-between align-items-center">
             <strong>Produtos Cadastrados</strong>
-            <CButton color="success" @click="router.push('/produtos/novo')">
+            <CButton color="success" @click="router.push('/produto/cadastro')">
               <CIcon name="cil-plus" />Novo Produto
             </CButton>
           </div>
