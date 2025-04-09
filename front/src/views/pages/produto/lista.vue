@@ -1,45 +1,13 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, inject } from 'vue'
 import { useRouter } from 'vue-router'
 
+const api = inject('api')
 const router = useRouter()
-
-// Fake backend - dados simulados
-const fakeProdutos = Array.from({ length: 45 }, (_, i) => ({
-  id: i + 1,
-  codigo_interno: `PROD${String(i + 1).padStart(3, '0')}`,
-  nome: `Produto ${i + 1}`,
-  descricao: `Descrição do produto ${i + 1}`,
-  preco: parseFloat((Math.random() * 100 + 5).toFixed(2)),
-  estoque: Math.floor(Math.random() * 100),
-  unidade_medida: ['un', 'kg', 'l', 'm'][Math.floor(Math.random() * 4)],
-  marca: ['Marca A', 'Marca B', 'Marca C', 'Marca D'][Math.floor(Math.random() * 4)],
-  codigo_barras: `789${String(Math.floor(Math.random() * 1000000000)).padStart(9, '0')}`,
-  ativo: Math.random() > 0.3,
-  fornecedor_id: Math.floor(Math.random() * 3) + 1,
-  fornecedor: {
-    id: Math.floor(Math.random() * 3) + 1,
-    nome: ['Fornecedor X', 'Fornecedor Y', 'Fornecedor Z'][Math.floor(Math.random() * 3)]
-  }
-}))
-
-const fakeFornecedores = [
-  { id: 1, nome: 'Fornecedor X' },
-  { id: 2, nome: 'Fornecedor Y' },
-  { id: 3, nome: 'Fornecedor Z' }
-]
-
-// Simular chamada API com delay
-const fakeApiCall = (data, delay = 500) => {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve({ data })
-    }, delay)
-  })
-}
 
 // Estado dos produtos e paginação
 const produtos = ref([])
+const fornecedores = ref([])
 const loading = ref(true)
 const error = ref(null)
 const totalItems = ref(0)
@@ -48,14 +16,6 @@ const itemsPerPage = ref(10)
 const totalPages = ref(1)
 
 // Filtros
-let filters_request = ref({
-  nome: '',
-  codigo_interno: '',
-  codigo_barras: '',
-  ativo: 'todos',
-  fornecedor_id: null
-})
-
 const filters = ref({
   nome: '',
   codigo_interno: '',
@@ -64,72 +24,46 @@ const filters = ref({
   fornecedor_id: null
 })
 
-
-
-// Buscar produtos (fake)
+// Buscar produtos da API
 const fetchProdutos = async () => {
   loading.value = true
   error.value = null
   
   try {
-    // Simular delay da API
-    await fakeApiCall(null, 300)
+    // Construir parâmetros da URL
+    const params = new URLSearchParams()
     
-    // Aplicar filtros
-    let filtered = [...fakeProdutos]
+    if (filters.value.nome) params.append('nome', filters.value.nome)
+    if (filters.value.codigo_interno) params.append('codigo_interno', filters.value.codigo_interno)
+    if (filters.value.codigo_barras) params.append('codigo_barras', filters.value.codigo_barras)
+    if (filters.value.ativo !== 'todos') params.append('status', filters.value.ativo === 'ativo')
+    if (filters.value.fornecedor_id) params.append('fornecedor_id', filters.value.fornecedor_id)
+    
+    params.append('page', currentPage.value)
+    params.append('per_page', itemsPerPage.value)
 
-    filters_request = filters
+    const response = await api.get('/produto/filtro', { params })
     
-    if (filters_request.value.nome) {
-      filtered = filtered.filter(p => 
-        p.nome.toLowerCase().includes(filters_request.value.nome.toLowerCase())
-      )
-    }
-    
-    if (filters_request.value.codigo_interno) {
-      filtered = filtered.filter(p => 
-        p.codigo_interno.includes(filters_request.value.codigo_interno)
-      )
-    }
-    
-    if (filters_request.value.codigo_barras) {
-      filtered = filtered.filter(p => 
-        p.codigo_barras.includes(filters_request.value.codigo_barras)
-      )
-    }
-    
-    if (filters_request.value.ativo !== 'todos') {
-      const status = filters_request.value.ativo === 'ativo'
-      filtered = filtered.filter(p => p.ativo === status)
-    }
-    
-    if (filters_request.value.fornecedor_id) {
-      filtered = filtered.filter(p => 
-        p.fornecedor_id === filters_request.value.fornecedor_id
-      )
-    }
-    
-    // Paginação
-    totalItems.value = filtered.length
+    produtos.value = response.data
+    totalItems.value = response.headers['x-total-count'] || response.data.length
     totalPages.value = Math.ceil(totalItems.value / itemsPerPage.value)
-    
-    const start = (currentPage.value - 1) * itemsPerPage.value
-    const end = start + itemsPerPage.value
-    produtos.value = filtered.slice(start, end)
     
   } catch (err) {
     error.value = 'Erro ao carregar produtos'
     console.error('Erro:', err)
+    if (err.response?.data?.detail) {
+      error.value = err.response.data.detail
+    }
   } finally {
     loading.value = false
   }
 }
 
-// Buscar fornecedores (fake)
+// Buscar fornecedores da API
 const fetchFornecedores = async () => {
   try {
-    await fakeApiCall(null, 200)
-    fornecedores.value = fakeFornecedores
+    const response = await api.get('/fornecedor') // Ajuste esta rota conforme sua API
+    fornecedores.value = response.data
   } catch (err) {
     console.error('Erro ao buscar fornecedores:', err)
   }
@@ -140,22 +74,15 @@ const editProduto = (id) => {
   router.push(`/produtos/editar/${id}`)
 }
 
-// Inativar/Ativar produto (fake)
+// Inativar/Ativar produto
 const toggleStatus = async (produto) => {
   if (!confirm(`Tem certeza que deseja ${produto.ativo ? 'inativar' : 'ativar'} este produto?`)) {
     return
   }
 
   try {
-    // Simular chamada API
-    await fakeApiCall(null, 200)
-    
-    // Atualizar localmente
-    const index = fakeProdutos.findIndex(p => p.id === produto.id)
-    if (index !== -1) {
-      fakeProdutos[index].ativo = !fakeProdutos[index].ativo
-      fetchProdutos()
-    }
+    await api.patch(`/produto/${produto.id}`)
+    await fetchProdutos() // Recarrega a lista após a alteração
   } catch (err) {
     alert('Erro ao alterar status do produto')
     console.error('Erro:', err)
@@ -191,6 +118,7 @@ const formatStatus = (ativo) => {
 watch([currentPage, itemsPerPage], fetchProdutos)
 
 watch(
+  filters,
   () => {
     currentPage.value = 1
     fetchProdutos()
@@ -208,7 +136,7 @@ onMounted(() => {
 <template>
   <div class="product-list-wrapper">
     <CContainer fluid>
-            <!-- Card de Filtros -->
+      <!-- Card de Filtros -->
       <CCard class="mb-4">
         <CCardHeader>
           <strong>Filtros</strong>
@@ -284,8 +212,8 @@ onMounted(() => {
         <CCardHeader>
           <div class="d-flex justify-content-between align-items-center">
             <strong>Produtos Cadastrados</strong>
-            <CButton color="success" @click="router.push('/produtos/novo')">
-              <CIcon name="cil-plus" />Novo Produto
+            <CButton color="success" @click="router.push('/produto/cadastro')">
+              <CIcon name="cil-plus" /> Novo Produto
             </CButton>
           </div>
         </CCardHeader>
@@ -302,6 +230,7 @@ onMounted(() => {
               <CTableRow>
                 <CTableHeaderCell>Código interno</CTableHeaderCell>
                 <CTableHeaderCell>Nome</CTableHeaderCell>
+                <CTableHeaderCell>Descrição</CTableHeaderCell>
                 <CTableHeaderCell>Preço</CTableHeaderCell>
                 <CTableHeaderCell>Estoque</CTableHeaderCell>
                 <CTableHeaderCell>Fornecedor</CTableHeaderCell>
@@ -313,6 +242,7 @@ onMounted(() => {
               <CTableRow v-for="produto in produtos" :key="produto.id">
                 <CTableDataCell>{{ produto.codigo_interno }}</CTableDataCell>
                 <CTableDataCell>{{ produto.nome }}</CTableDataCell>
+                <CTableDataCell>{{ produto.descricao || '-' }}</CTableDataCell>
                 <CTableDataCell>{{ formatPrice(produto.preco) }}</CTableDataCell>
                 <CTableDataCell>{{ produto.estoque }} {{ produto.unidade_medida }}</CTableDataCell>
                 <CTableDataCell>{{ produto.fornecedor?.nome || '-' }}</CTableDataCell>
@@ -343,7 +273,7 @@ onMounted(() => {
                 </CTableDataCell>
               </CTableRow>
               <CTableRow v-if="produtos.length === 0">
-                <CTableDataCell colspan="7" class="text-center">
+                <CTableDataCell colspan="8" class="text-center">
                   Nenhum produto encontrado
                 </CTableDataCell>
               </CTableRow>
@@ -373,3 +303,9 @@ onMounted(() => {
     </CContainer>
   </div>
 </template>
+
+<style scoped>
+.product-list-wrapper {
+  padding: 20px;
+}
+</style>

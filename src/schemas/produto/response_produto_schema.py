@@ -23,3 +23,22 @@ class AlteraProdutoResponseSchema(BaseModel):
 
     class Config:
         from_attributes = True  # Equivalente ao antigo orm_mode = True no Pydantic v2
+
+
+class ProdutoListResponseSchema(BaseModel):
+    id: int
+    codigo_interno: str
+    nome: str
+    descricao: Optional[str] = None
+    preco: float
+    estoque: Optional[int] = None
+    unidade_medida: Optional[str] = None
+    marca: Optional[str] = None
+    codigo_barras: Optional[str] = None
+    ativo: bool
+    fornecedor_id: Optional[int] = None
+    data_criacao: datetime
+    data_atualizacao: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True       

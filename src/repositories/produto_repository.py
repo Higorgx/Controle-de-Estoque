@@ -4,6 +4,7 @@ from src.schemas.produto.cria_produto_schema import CriaProdutoSchema
 from src.schemas.produto.altera_produto_schema import AlteraProdutoSchema
 from datetime import datetime
 from sqlalchemy.future import select
+from sqlalchemy import or_
 
 class ProdutoRepository:
     @staticmethod
@@ -46,3 +47,39 @@ class ProdutoRepository:
     async def get_by_codigo_barras(db: AsyncSession, codigo_barras: str):
         result = await db.execute(select(Produto).where(Produto.codigo_barras == codigo_barras))
         return result.scalar_one_or_none()
+    
+    @staticmethod
+    async def get_all_filtered(db: AsyncSession, filtros: dict):
+        query = select(Produto)
+        
+        # Busca geral (pesquisa em múltiplos campos)
+        if 'busca_geral' in filtros and filtros['busca_geral']:
+            busca = f"%{filtros['busca_geral']}%"
+            query = query.where(
+                or_(
+                    Produto.nome.ilike(busca),
+                    Produto.codigo_interno.ilike(busca),
+                    Produto.descricao.ilike(busca),
+                    Produto.codigo_barras.ilike(busca),
+                    Produto.marca.ilike(busca)
+                )
+            )
+        
+        # Filtros específicos (sobrescrevem a busca geral se especificados)
+        if 'nome' in filtros and filtros['nome']:
+            query = query.where(Produto.nome.ilike(f"%{filtros['nome']}%"))
+        
+        if 'codigo_interno' in filtros and filtros['codigo_interno']:
+            query = query.where(Produto.codigo_interno == filtros['codigo_interno'])
+        
+        if 'codigo_barras' in filtros and filtros['codigo_barras']:
+            query = query.where(Produto.codigo_barras == filtros['codigo_barras'])
+        
+        if 'status' in filtros and filtros['status'] is not None:
+            query = query.where(Produto.ativo == filtros['status'])
+        
+        if 'fornecedor_id' in filtros and filtros['fornecedor_id']:
+            query = query.where(Produto.fornecedor_id == filtros['fornecedor_id'])
+        
+        result = await db.execute(query)
+        return result.scalars().all()
