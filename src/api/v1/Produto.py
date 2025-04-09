@@ -5,9 +5,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from src.db.database import get_db
 from src.schemas.produto.cria_produto_schema import CriaProdutoSchema
 from src.schemas.produto.altera_produto_schema import AlteraProdutoSchema
-from src.schemas.produto.response_produto_schema import ProdutoResponseSchema
+from src.schemas.produto.response_produto_schema import ProdutoListResponseSchema
 from src.repositories.produto_repository import ProdutoRepository
 from fastapi.encoders import jsonable_encoder
+from src.schemas.produto.filtro_produto_schema import FiltroProdutoSchema
+from typing import Optional
 
 router = APIRouter(tags=["produto"])
 logger = logging.getLogger(__name__)
@@ -101,3 +103,20 @@ async def deleta_produto(produto_id: int, db: AsyncSession = Depends(get_db)):
     }
     
     return responses.JSONResponse(content=response_data, status_code=status.HTTP_200_OK)
+
+
+
+@router.get("/filtro", summary="Lista produtos com filtros (usando body)", response_model=list[ProdutoListResponseSchema])
+async def lista_produtos_com_filtro(
+    filtros: FiltroProdutoSchema = Depends(),
+    db: AsyncSession = Depends(get_db)
+):
+    produtos = await ProdutoRepository.get_all_filtered(db, filtros.model_dump(exclude_none=True))
+    
+    if not produtos:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Nenhum produto encontrado com os filtros fornecidos"
+        )
+    
+    return produtos

@@ -10,11 +10,13 @@ import { iconsSet as icons } from '@/assets/icons'
 import DocsComponents from '@/components/DocsComponents'
 import DocsExample from '@/components/DocsExample'
 import DocsIcons from '@/components/DocsIcons'
+import axiosPlugin from './plugins/axios'
 
 const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(CoreuiVue)
+app.use(axiosPlugin)
 app.provide('icons', icons)
 app.component('CIcon', CIcon)
 app.component('DocsComponents', DocsComponents)
