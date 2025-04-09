@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+# TODO: Deve fazer alguma forma de adicionar como variavel de ambiente
 class Config:
     """
     Classe para gerenciar as configurações do projeto.
@@ -28,3 +29,9 @@ class Config:
     API_VERSION = "v1"
     API_TITLE = "FastAPI Project"
     API_DESCRIPTION = "Uma aplicação FastAPI com estrutura modular e suporte a CRUD e uploads."
+
+    # Configuração do token JWT
+    SECRET_KEY = "supersecreta"
+    ALGORITHM = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES = 60
+    ACCESS_TOKEN_EXPIRE_DAYS = 7

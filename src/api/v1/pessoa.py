@@ -2,6 +2,7 @@ import logging
 from fastapi import APIRouter, Depends, HTTPException, status, responses
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi.encoders import jsonable_encoder
+from src.core.auth.bearer import JWTBearer
 from src.db.database import get_db
 from src.schemas.pessoa.cria_pessoa_schema import CriaPessoaSchema
 from src.schemas.pessoa.altera_pessoa_schema import AlteraPessoaSchema
@@ -11,6 +12,8 @@ router = APIRouter()
 
 logger = logging.getLogger(__name__)
 
+# Exemplo para uma rota especifica
+# @router.post("/", summary="Registra pessoa", status_code=status.HTTP_201_CREATED, dependencies=[Depends(JWTBearer())])
 @router.post("/", summary="Registra pessoa", status_code=status.HTTP_201_CREATED)
 async def cria_pessoa(pessoaSchema: CriaPessoaSchema, db: AsyncSession = Depends(get_db)):
     pessoa = await PessoaService.criar_pessoa(db, pessoaSchema)
