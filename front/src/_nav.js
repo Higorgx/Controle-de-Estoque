@@ -14,6 +14,24 @@ export default [
     name: 'Theme',
   },
   {
+    component: 'CNavGroup',
+    name: 'Produtos',
+    to: '/produto',
+    icon: 'cil-puzzle',
+    items: [
+      {
+        component: 'CNavItem',
+        name: 'Listagem',
+        to: '/produto/lista',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Cadastro',
+        to: '/produto/cadastro',
+      },
+    ],
+  },
+  {
     component: 'CNavItem',
     name: 'Colors',
     to: '/theme/colors',

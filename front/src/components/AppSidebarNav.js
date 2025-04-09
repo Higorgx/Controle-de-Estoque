@@ -56,6 +56,7 @@ const AppSidebarNav = defineComponent({
     })
 
     const renderItem = (item) => {
+      console.log(item)
       if (item.items) {
         return h(
           CNavGroup,
@@ -73,6 +74,7 @@ const AppSidebarNav = defineComponent({
                 name: item.icon,
               }),
               item.name,
+            console.log(item.icon)
             ],
             default: () => item.items.map((child) => renderItem(child)),
           },

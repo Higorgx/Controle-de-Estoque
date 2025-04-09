@@ -14,6 +14,7 @@ const icons = freeSet
         <template v-for="(icon, iconName) in icons" :key="iconName">
           <CCol class="mb-5" :xs="3" :sm="2">
             <CIcon :content="icon" size="xxl" />
+            {{ iconName }}
             <div>{{ toKebabCase(iconName) }}</div>
           </CCol>
         </template>
