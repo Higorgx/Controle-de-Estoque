@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from src.api.v1.pessoa import router as pessoa_router
-from src.api.v1.Produto import router as produto_router
+from src.api.v1.produto import router as produto_router
 
 # Cria um roteador principal
 api_router = APIRouter()
