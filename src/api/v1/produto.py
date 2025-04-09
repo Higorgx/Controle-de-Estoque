@@ -3,9 +3,12 @@ from fastapi import APIRouter, Depends, HTTPException, status, responses
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi.encoders import jsonable_encoder
 from src.db.database import get_db
+from typing import Optional
 from src.schemas.produto.cria_produto_schema import CriaProdutoSchema
+from src.schemas.produto.response_produto_schema import ProdutoListResponseSchema
 from src.schemas.produto.altera_produto_schema import AlteraProdutoSchema
 from src.services.produto_service import ProdutoService
+from src.repositories.produto_repository import ProdutoRepository
 
 router = APIRouter(tags=["produto"])
 logger = logging.getLogger(__name__)
@@ -70,7 +73,7 @@ async def lista_produtos_com_filtro(
         'status': status,
         'fornecedor_id': fornecedor_id
     }
-    
+    # TODO mover para service essa budega 
     produtos = await ProdutoRepository.get_all_filtered (db, {k: v for k, v in filtros.items() if v is not None})
     
     if not produtos:

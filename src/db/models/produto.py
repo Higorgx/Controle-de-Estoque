@@ -1,7 +1,8 @@
 # src/db/models/produto.py
-from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey 
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
+from typing import Optional
 from datetime import datetime
 from src.db.models.models import Base
 
