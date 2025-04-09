@@ -8,11 +8,11 @@ from fastapi import HTTPException, status
 from pydantic import BaseModel
 from typing import Optional
 
-
-
 from src.db.models.pessoa import Pessoa
 from src.schemas.pessoa.cria_pessoa_schema import CriaPessoaSchema
 from src.schemas.pessoa.altera_pessoa_schema import AlteraPessoaSchema
+
+from src.core.auth.security import hash_password
 
 logger = logging.getLogger(__name__)
 
@@ -29,6 +29,9 @@ class PessoaRepository():
 
     @staticmethod
     async def create(db: AsyncSession, pessoa_data: CriaPessoaSchema) -> Pessoa:
+        
+        pessoa_data.senha = hash_password(password=pessoa_data.senha)
+        
         db_pessoa = Pessoa(**pessoa_data.dict())
         db.add(db_pessoa)
         await db.commit()
@@ -42,6 +45,12 @@ class PessoaRepository():
     @staticmethod
     async def get_by_cpf_cnpj(db: AsyncSession, cpf_cnpj: str) -> Optional[Pessoa]:
         query = select(Pessoa).where(Pessoa.cpf_cnpj == cpf_cnpj)
+        result = await db.execute(query)
+        return result.scalars().first()  # Returns None if not found
+
+    @staticmethod
+    async def get_by_email(db: AsyncSession, email: str) -> Optional[Pessoa]:
+        query = select(Pessoa).where(Pessoa.email == email)
         result = await db.execute(query)
         return result.scalars().first()  # Returns None if not found
 

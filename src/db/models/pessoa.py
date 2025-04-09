@@ -5,6 +5,8 @@ from src.db.models.models import Base  # Importa a Base centralizada
 
 from datetime import datetime
 
+from src.schemas.pessoa.enums.role_enum import RoleEnum
+
 class Pessoa(Base):
     __tablename__ = "pessoas"
 
@@ -23,5 +25,8 @@ class Pessoa(Base):
     rg_ie = Column(String(50), nullable=True)
     data_criacao = Column(DateTime, default=func.now())
     data_atualizacao = Column(DateTime, default=func.now(), onupdate=func.now())
-    Admin = Column(CHAR(), nullable=True)
     legado = Column(CHAR(), nullable=True)
+
+    email = Column(String(200), unique=True, nullable=False)
+    senha = Column(String(100), nullable=False)
+    role = Column(String(20), nullable=False, default=RoleEnum.usuario)
