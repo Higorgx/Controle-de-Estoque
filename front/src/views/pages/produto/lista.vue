@@ -24,8 +24,6 @@ const filters = ref({
   fornecedor_id: null
 })
 
-
-
 // Buscar produtos da API
 const fetchProdutos = async () => {
   loading.value = true

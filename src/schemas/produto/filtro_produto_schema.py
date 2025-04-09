@@ -2,6 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 class FiltroProdutoSchema(BaseModel):
+    busca_geral: Optional[str] = Field(None, max_length=150, description="Busca geral em nome, código interno, descrição, marca ou código de barras (partial match)")
     nome: Optional[str] = Field(None, max_length=100, description="Filtrar por nome do produto (partial match)")
     codigo_interno: Optional[str] = Field(None, max_length=50, description="Filtrar por código interno exato")
     codigo_barras: Optional[str] = Field(None, max_length=50, description="Filtrar por código de barras exato")
@@ -11,8 +12,7 @@ class FiltroProdutoSchema(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "nome": "produto",
-                "codigo_interno": "PROD001",
+                "busca_geral": "produto",
                 "status": True,
                 "fornecedor_id": 1
             }

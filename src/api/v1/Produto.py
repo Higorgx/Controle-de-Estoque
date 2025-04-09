@@ -106,12 +106,27 @@ async def deleta_produto(produto_id: int, db: AsyncSession = Depends(get_db)):
 
 
 
-@router.get("/filtro", summary="Lista produtos com filtros (usando body)", response_model=list[ProdutoListResponseSchema])
+@router.get("/filtro", summary="Lista produtos com filtros", response_model=list[ProdutoListResponseSchema])
 async def lista_produtos_com_filtro(
-    filtros: FiltroProdutoSchema = Depends(),
+    busca_geral: Optional[str] = None,
+    nome: Optional[str] = None,
+    codigo_interno: Optional[str] = None,
+    codigo_barras: Optional[str] = None,
+    status: Optional[bool] = None,
+    fornecedor_id: Optional[int] = None,
     db: AsyncSession = Depends(get_db)
 ):
-    produtos = await ProdutoRepository.get_all_filtered(db, filtros.model_dump(exclude_none=True))
+    # Construir dicionário de filtros
+    filtros = {
+        'busca_geral': busca_geral,
+        'nome': nome,
+        'codigo_interno': codigo_interno,
+        'codigo_barras': codigo_barras,
+        'status': status,
+        'fornecedor_id': fornecedor_id
+    }
+    
+    produtos = await ProdutoRepository.get_all_filtered (db, {k: v for k, v in filtros.items() if v is not None})
     
     if not produtos:
         raise HTTPException(

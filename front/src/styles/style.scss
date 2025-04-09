@@ -144,3 +144,45 @@ select:invalid {
 .btn-success{
   --cui-btn-color: #fff!important;
 }
+.contagem-estoque-wrapper {
+  padding: 1rem 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.text-success {
+  color: #2eb85c !important;
+}
+.text-danger {
+  color: #e55353 !important;
+}
+.text-warning {
+  color: #f9b115 !important;
+}
+
+input[type='number'] {
+  text-align: right;
+  max-width: 120px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .d-flex.gap-2 {
+    gap: 0.5rem !important;
+  }
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}

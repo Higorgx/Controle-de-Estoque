@@ -1,7 +1,13 @@
 <script setup>
-import { ref, onMounted, computed, onBeforeUnmount } from 'vue'
+import { ref, onMounted, computed, onBeforeUnmount, watch } from 'vue'
 import { freeSet } from '@coreui/icons'
 import { StreamBarcodeReader } from 'vue-barcode-reader'
+import { getCurrentInstance } from 'vue'
+import { debounce } from 'lodash'
+
+// Acessa a instância do Axios injetada globalmente
+const { proxy } = getCurrentInstance()
+const api = proxy.$api
 
 // Sistema de Toasts
 const toasts = ref([])
@@ -34,29 +40,15 @@ const hideToast = (id) => {
   }
 }
 
-// Dados simulados de produtos
-const fakeProdutos = Array.from({ length: 50 }, (_, i) => ({
-  id: i + 1,
-  codigo_interno: `PROD${String(i + 1).padStart(3, '0')}`,
-  nome: `Produto ${i + 1}`,
-  descricao: `Descrição detalhada do produto ${i + 1}`,
-  preco: parseFloat((Math.random() * 1000 + 10).toFixed(2)),
-  estoque: Math.floor(Math.random() * 100),
-  unidade_medida: ['un', 'kg', 'l', 'm'][Math.floor(Math.random() * 4)],
-  marca: ['Marca A', 'Marca B', 'Marca C', 'Marca D'][Math.floor(Math.random() * 4)],
-  codigo_barras: `789${String(Math.floor(Math.random() * 1000000000)).padStart(9, '0')}`,
-  ativo: Math.random() > 0.3,
-  fornecedor_id: Math.floor(Math.random() * 3) + 1
-}))
-
 // Estado da aplicação
 const produtos = ref([])
 const produtosParaContagem = ref([])
-const loading = ref(true)
+const loading = ref(false)
 const filtro = ref('')
 const termoBusca = ref('')
 const mostrarApenasDivergentes = ref(false)
 const dropdownAberto = ref(false)
+const buscandoProdutos = ref(false)
 
 const state = ref({
   scannerAtivo: true,
@@ -64,88 +56,100 @@ const state = ref({
 })
 const modalScanner = ref(false)
 
-// Carregar produtos (simulado)
-const carregarProdutos = async () => {
-  loading.value = true
+// Busca produtos na API com debounce
+const buscarProdutosAPI = debounce(async (termo) => {
+  if (!termo || termo.length < 2) {
+    produtos.value = []
+    dropdownAberto.value = false
+    return
+  }
+
+  buscandoProdutos.value = true
+  dropdownAberto.value = true
+  
   try {
-    // Simula delay de API
-    await new Promise(resolve => setTimeout(resolve, 800))
-    produtos.value = fakeProdutos.map(p => ({
+    const response = await api.get('/produto/filtro', {
+      params: {
+        busca_geral: termo,
+        limit: 10
+      }
+    })
+    
+    produtos.value = response.data.map(p => ({
       ...p,
       contagemFisica: null,
       diferenca: 0,
       adicionado: false
     }))
   } catch (error) {
-    showToast('Erro', 'Erro ao carregar produtos', 'danger')
-    console.error('Erro ao carregar produtos:', error)
+    showToast('Erro', 'Falha ao buscar produtos', 'danger')
+    console.error('Erro ao buscar produtos:', error)
   } finally {
-    loading.value = false
+    buscandoProdutos.value = false
+  }
+}, 300)
+
+// Watch para o termo de busca
+watch(termoBusca, (novoTermo) => {
+  buscarProdutosAPI(novoTermo)
+})
+
+const onDecode = async (result) => {
+  showToast('Sucesso', `Código lido: ${result}`, 'success')
+  state.value.textoScanner = result
+  
+  try {
+    modalScanner.value = false
+    state.value.scannerAtivo = true
+    
+    // Busca exata pelo código de barras
+    const response = await api.get('/produto/filtro', {
+      params: { codigo_barras: result }
+    })
+    
+    if (response.data.length > 0) {
+      adicionarProduto(response.data[0])
+    } else {
+      termoBusca.value = result
+      abrirDropdown()
+      showToast('Aviso', 'Produto não encontrado. Verifique o código.', 'warning')
+    }
+  } catch (error) {
+    console.error('Erro ao buscar produto:', error)
+    termoBusca.value = result
+    abrirDropdown()
   }
 }
 
-const onDecode = (result) => {
-  showToast('Sucesso', `Código lido: ${result}`, 'success')
-  termoBusca.value = result
-  state.value.textoScanner = result
-  abrirDropdown()
-  // Fecha o modal após 1 segundo
-  setTimeout(() => {
-    modalScanner.value = false
-    state.value.scannerAtivo = true
-    state.value.textoScanner =''
-  }, 1000)
-}
-
 const onLoaded = () => {
-  console.log('Scanner carregado')
   state.value.scannerAtivo = true
 }
 
 // Produtos disponíveis para adição
 const produtosDisponiveis = computed(() => {
   if (!dropdownAberto.value) return []
-  
-  const produtosNaoAdicionados = produtos.value.filter(p => 
+  return produtos.value.filter(p => 
     !produtosParaContagem.value.some(added => added.id === p.id)
-  )
-
-  if (!termoBusca.value) {
-    return produtosNaoAdicionados.slice(0, 10)
-  }
-
-  const termo = termoBusca.value.toLowerCase()
-  return produtosNaoAdicionados.filter(p => 
-    p.codigo_interno.toLowerCase().includes(termo) ||
-    p.nome.toLowerCase().includes(termo) ||
-    p.codigo_barras.includes(termo)
   )
 })
 
-// Abrir dropdown e garantir dados carregados
 const abrirDropdown = () => {
   if (!dropdownAberto.value) {
     dropdownAberto.value = true
-    // Adiciona o event listener quando o dropdown abre
     document.addEventListener('click', fecharDropdownAoClicarFora)
   }
-  if (produtos.value.length === 0) {
-    carregarProdutos()
-  }
 }
+
 const fecharDropdownAoClicarFora = (event) => {
   const dropdownElement = document.querySelector('.dropdown-menu')
   const inputElement = document.querySelector('input[placeholder="Digite código, nome ou código de barras"]')
   
-  // Verifica se o clique foi fora do dropdown e do input
-  if (!dropdownElement.contains(event.target) && !inputElement.contains(event.target)) {
+  if (!dropdownElement?.contains(event.target) && !inputElement?.contains(event.target)) {
     dropdownAberto.value = false
-    // Remove o event listener quando o dropdown fecha
     document.removeEventListener('click', fecharDropdownAoClicarFora)
   }
 }
 
-// Adicionar produto à contagem
 const adicionarProduto = (produto) => {
   if (!produtosParaContagem.value.some(p => p.id === produto.id)) {
     produtosParaContagem.value.push({
@@ -153,10 +157,6 @@ const adicionarProduto = (produto) => {
       contagemFisica: null,
       diferenca: 0
     })
-    const index = produtos.value.findIndex(p => p.id === produto.id)
-    if (index !== -1) {
-      produtos.value[index].adicionado = true
-    }
     showToast('Sucesso', `${produto.nome} adicionado à contagem`, 'success')
   } else {
     showToast('Aviso', 'Produto já adicionado', 'warning')
@@ -165,7 +165,6 @@ const adicionarProduto = (produto) => {
   dropdownAberto.value = false
 }
 
-// Atualizar contagem física
 const atualizarContagem = (produtoId, valor) => {
   const produto = produtosParaContagem.value.find(p => p.id === produtoId)
   if (produto) {
@@ -174,20 +173,14 @@ const atualizarContagem = (produtoId, valor) => {
   }
 }
 
-// Remover produto da contagem
 const removerProduto = (produtoId) => {
   const produto = produtosParaContagem.value.find(p => p.id === produtoId)
   if (produto) {
     produtosParaContagem.value = produtosParaContagem.value.filter(p => p.id !== produtoId)
-    const index = produtos.value.findIndex(p => p.id === produtoId)
-    if (index !== -1) {
-      produtos.value[index].adicionado = false
-    }
     showToast('Info', `${produto.nome} removido da contagem`, 'info')
   }
 }
 
-// Salvar contagem (simulado)
 const salvarContagem = async () => {
   try {
     if (produtosParaContagem.value.length === 0) {
@@ -202,20 +195,25 @@ const salvarContagem = async () => {
       return
     }
     
-    // Simula chamada API
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await api.post('/contagem-estoque', {
+      produtos: produtosContados.map(p => ({
+        produto_id: p.id,
+        estoque_sistema: p.estoque,
+        contagem_fisica: p.contagemFisica,
+        diferenca: p.diferenca
+      })),
+      data: new Date().toISOString()
+    })
     
-    showToast('Sucesso', `Contagem de ${produtosContados.length} produtos salva com sucesso!`, 'success')
-    
-    console.log('Dados para enviar:', produtosContados)
+    showToast('Sucesso', `Contagem salva (${produtosContados.length} itens)`, 'success')
     
   } catch (error) {
-    showToast('Erro', 'Erro ao salvar contagem', 'danger')
+    const errorMessage = error.response?.data?.message || 'Erro ao salvar contagem'
+    showToast('Erro', errorMessage, 'danger')
     console.error('Erro ao salvar contagem:', error)
   }
 }
 
-// Filtrar produtos para exibição na tabela
 const produtosFiltrados = computed(() => {
   let filtrados = produtosParaContagem.value
   
@@ -224,7 +222,7 @@ const produtosFiltrados = computed(() => {
     filtrados = filtrados.filter(p => 
       p.codigo_interno.toLowerCase().includes(termo) ||
       p.nome.toLowerCase().includes(termo) ||
-      p.codigo_barras.includes(termo)
+      p.codigo_barras?.includes(termo)
     )
   }
   
@@ -235,13 +233,11 @@ const produtosFiltrados = computed(() => {
   return filtrados
 })
 
-// Formatar diferença
 const formatDiferença = (value) => {
   if (value === 0) return '0'
   return value > 0 ? `+${value}` : value
 }
 
-// Formatar preço
 const formatPrice = (value) => {
   return value.toLocaleString('pt-BR', {
     style: 'currency',
@@ -249,15 +245,13 @@ const formatPrice = (value) => {
   })
 }
 
-// Carregar dados iniciais
 onMounted(() => {
-  carregarProdutos()
+  document.addEventListener('click', fecharDropdownAoClicarFora)
 })
 
 onBeforeUnmount(() => {
   document.removeEventListener('click', fecharDropdownAoClicarFora)
 })
-
 </script>
 
 <template>
@@ -285,28 +279,34 @@ onBeforeUnmount(() => {
                   
                   <!-- Dropdown de resultados -->
                   <div 
-                    v-if="dropdownAberto && produtosDisponiveis.length > 0"
+                    v-if="dropdownAberto"
                     class="dropdown-menu show w-100 mt-5"
                     style="position: absolute; z-index: 1000; max-height: 300px; overflow-y: auto;"
                   >
-                    <div class="dropdown-header" v-if="!termoBusca">
-                      <small>Produtos disponíveis (10 primeiros)</small>
+                    <div v-if="buscandoProdutos" class="text-center p-2">
+                      <CSpinner size="sm" /> Buscando produtos...
                     </div>
+                    
                     <div 
+                      v-else-if="produtosDisponiveis.length > 0"
                       v-for="produto in produtosDisponiveis" 
                       :key="produto.id"
                       class="dropdown-item cursor-pointer"
-                      @mousedown="adicionarProduto(produto)"
+                      @click="adicionarProduto(produto)"
                     >
                       <div class="fw-semibold">{{ produto.nome }}</div>
                       <div class="small text-body-secondary">
-                        {{ produto.codigo_interno }} | {{ produto.codigo_barras }} | 
+                        {{ produto.codigo_interno }} | {{ produto.codigo_barras || 'Sem código' }} | 
                         Estoque: {{ produto.estoque }} | {{ formatPrice(produto.preco) }}
                       </div>
                     </div>
-                    <div class="dropdown-item text-center small text-body-secondary" 
-                         v-if="!termoBusca && produtosDisponiveis.length === 10">
-                      <em>Digite para buscar mais produtos</em>
+                    
+                    <div v-else-if="termoBusca.length >= 2" class="dropdown-item text-center small text-body-secondary">
+                      <em>Nenhum produto encontrado</em>
+                    </div>
+                    
+                    <div v-else class="dropdown-item text-center small text-body-secondary">
+                      <em>Digite pelo menos 2 caracteres</em>
                     </div>
                   </div>
                 </CInputGroup>
@@ -321,6 +321,7 @@ onBeforeUnmount(() => {
         </CCardBody>
       </CCard>
       
+      <!-- Modal do Scanner -->
       <CModal alignment="center" :visible="modalScanner" @close="() => { modalScanner = false; state.scannerAtivo = false }">
         <CModalHeader>
           <CModalTitle>Leitor de Código de Barras</CModalTitle>
@@ -336,10 +337,6 @@ onBeforeUnmount(() => {
           <div v-else>
             <CSpinner />
             <p>Carregando scanner...</p>
-          </div>
-          
-          <div v-if="state.textoScanner" class="mt-3 p-2 bg-light rounded">
-            <strong>Código lido:</strong> {{ state.textoScanner }}
           </div>
         </CModalBody>
         <CModalFooter>
@@ -384,12 +381,7 @@ onBeforeUnmount(() => {
           </div>
         </CCardHeader>
         <CCardBody>
-          <div v-if="loading" class="text-center my-5">
-            <CSpinner color="primary" />
-            <p>Carregando produtos...</p>
-          </div>
-
-          <CTable v-else striped hover responsive>
+          <CTable striped hover responsive>
             <CTableHead>
               <CTableRow>
                 <CTableHeaderCell width="50px"></CTableHeaderCell>
@@ -412,7 +404,7 @@ onBeforeUnmount(() => {
                 <CTableDataCell>
                   <div class="fw-semibold">{{ produto.nome }}</div>
                   <div class="small text-body-secondary">
-                    {{ produto.marca }} | {{ produto.codigo_barras }}
+                    {{ produto.marca }} | {{ produto.codigo_barras || 'Sem código' }}
                   </div>
                 </CTableDataCell>
                 <CTableDataCell class="text-end">
@@ -528,61 +520,3 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style scoped>
-.contagem-estoque-wrapper {
-  padding: 1rem 0;
-}
-
-.card {
-  border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-
-.dropdown-item {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-.dropdown-item:hover {
-  background-color: #f8f9fa;
-}
-.dropdown-header {
-  padding: 0.25rem 1rem;
-  font-size: 0.875rem;
-  color: #6c757d;
-  background-color: #f8f9fa;
-}
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.text-success {
-  color: #2eb85c !important;
-}
-.text-danger {
-  color: #e55353 !important;
-}
-.text-warning {
-  color: #f9b115 !important;
-}
-
-input[type='number'] {
-  text-align: right;
-  max-width: 120px;
-  margin: 0 auto;
-  display: block;
-}
-
-.table-responsive {
-  overflow-x: auto;
-}
-
-@media (max-width: 768px) {
-  .d-flex.gap-2 {
-    gap: 0.5rem !important;
-  }
-  .btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-  }
-}
-</style>

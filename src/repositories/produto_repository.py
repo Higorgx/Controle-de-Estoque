@@ -4,6 +4,7 @@ from src.schemas.produto.cria_produto_schema import CriaProdutoSchema
 from src.schemas.produto.altera_produto_schema import AlteraProdutoSchema
 from datetime import datetime
 from sqlalchemy.future import select
+from sqlalchemy import or_
 
 class ProdutoRepository:
     @staticmethod
@@ -51,6 +52,20 @@ class ProdutoRepository:
     async def get_all_filtered(db: AsyncSession, filtros: dict):
         query = select(Produto)
         
+        # Busca geral (pesquisa em múltiplos campos)
+        if 'busca_geral' in filtros and filtros['busca_geral']:
+            busca = f"%{filtros['busca_geral']}%"
+            query = query.where(
+                or_(
+                    Produto.nome.ilike(busca),
+                    Produto.codigo_interno.ilike(busca),
+                    Produto.descricao.ilike(busca),
+                    Produto.codigo_barras.ilike(busca),
+                    Produto.marca.ilike(busca)
+                )
+            )
+        
+        # Filtros específicos (sobrescrevem a busca geral se especificados)
         if 'nome' in filtros and filtros['nome']:
             query = query.where(Produto.nome.ilike(f"%{filtros['nome']}%"))
         
